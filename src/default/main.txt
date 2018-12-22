@@ -61,8 +61,7 @@ const create_program = (vs, fs) => {
   );
   
   const uniLocation = [];
-  uniLocation[0] = gl.getUniformLocation(prg, "time");
-  uniLocation[1] = gl.getUniformLocation(prg, "resolution");
+  uniLocation[0] = gl.getUniformLocation(prg, "time");  
 
   const position = [
     -1.0,1.0,0.0,
@@ -87,8 +86,7 @@ const create_program = (vs, fs) => {
   
   const render = () => {
     gl.clear(gl.COLOR_BUFFER_BIT);
-    gl.uniform1f(uniLocation[0], (new Date().getTime() - startTime) * 0.001);
-    gl.uniform2fv(uniLocation[1], [canvas.width, canvas.height]);
+    gl.uniform1f(uniLocation[0], (new Date().getTime() - startTime) * 0.001); 
     set_attribute([vPosition], attLocation, attStride);
     gl.drawElements(gl.TRIANGLES, index.length, gl.UNSIGNED_SHORT, 0);
     gl.flush();  

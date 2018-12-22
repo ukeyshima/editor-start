@@ -143,6 +143,12 @@ class State {
   updateRunButtonColor(obj) {
     this.runButtonColor = obj;
   }
+  @observable
+  gl=null;
+  @action.bound
+  updateGlContext(gl){
+    this.gl=gl;
+  }
 }
 
 export default State;
