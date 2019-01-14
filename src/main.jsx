@@ -1,4 +1,4 @@
-import './style.scss';
+import style from './style.scss';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import RunAndStop from './runAndStop';
@@ -14,6 +14,12 @@ const stores = {
 };
 
 class HandWritingFormulaEditor extends React.Component {
+  componentDidMount() {
+    style.use();
+  }
+  componentWillUnmount() {
+    style.unuse();
+  }
   render() {
     return (
       <React.Fragment>
