@@ -1,6 +1,6 @@
 import React from 'react';
-import HotReloadButton from './hotReloadButton.jsx';
-import DefaultButton from './defaultButton.jsx';
+import HotReloadButton from './hotReloadButton';
+import DefaultButton from './defaultButton';
 import { inject, observer } from 'mobx-react';
 
 @inject('state')

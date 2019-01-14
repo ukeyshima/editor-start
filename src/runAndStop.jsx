@@ -1,6 +1,6 @@
 import React from 'react';
-import RunButton from './runButton.jsx';
-import StopButton from './stopButton.jsx';
+import RunButton from './runButton';
+import StopButton from './stopButton';
 
 export default class RunAndStop extends React.Component {
   render() {

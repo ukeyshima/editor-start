@@ -1,6 +1,6 @@
 import React from 'react';
-import Editor from './editor.jsx';
-import RunArea from './runArea.jsx';
+import Editor from './editor';
+import RunArea from './runArea';
 import { inject, observer } from 'mobx-react';
 
 @inject(({ state }) => ({
